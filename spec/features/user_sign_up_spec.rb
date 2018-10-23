@@ -14,7 +14,7 @@ RSpec.feature 'User sign up' do
   scenario 'website visitor can sign up for an account' do
     click_link 'Sign up'
 
-    fill_in 'Username', with: 'test_user1'
+    fill_in 'Username', with: 'testuser2'
     fill_in 'Email', with: 'testemail@gmail.com'
     fill_in 'user_password', with: 'password123'
     fill_in 'user_password_confirmation', with: 'password123'
@@ -22,7 +22,7 @@ RSpec.feature 'User sign up' do
 
     expect(page).to have_content('Welcome! You have signed up successfully.')
     expect(page).to have_content('Sign out')
-    expect(page).to have_css('.user-name', text: 'test_user1')
+    expect(page).to have_css('.user-name', text: 'testuser2')
     expect(page).not_to have_content('Sign in')
     expect(page).not_to have_content('Sign up')
   end
@@ -53,12 +53,6 @@ RSpec.feature 'User sign up' do
 
       expect(page).to have_content("Username has already been taken")
       expect(page).not_to have_content('Sign out')
-    end
-
-    pending 'username must be correct format' do
-    end
-
-    pending 'email must be present' do
     end
   end
 end
