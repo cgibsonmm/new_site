@@ -3,7 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
 
+# Rich Text Editor
 gem 'trix'
+
+# Shrine for image upload
+gem 'shrine', '~>2.0'
 
 gem 'jquery-rails'
 gem  'devise'

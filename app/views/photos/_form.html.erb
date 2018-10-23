@@ -1,12 +1,10 @@
 
-<%= simple_form_for(@post) do |f| %>
+<%= simple_form_for(@photo) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :body %>
-    <trix-editor input="post_body"></trix-editor>
+    <%= f.file_field :image, id: :photo_image %>
   </div>
 
   <div class="form-actions">
