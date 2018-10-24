@@ -24,7 +24,14 @@ RSpec.feature 'Adding Post to a forum thread' do
       fill_in('Leave a new post here...', with: '')
       click_button 'Submit Post'
 
-      expect(page).to have_content('Post failed to save')
+      expect(page).to have_content("Body can't be blank")
+    end
+
+    scenario 'Post body must be at least 10 chars' do
+      fill_in('Leave a new post here...', with: 'hhh')
+      click_button 'Submit Post'
+
+      expect(page).to have_content('Body is too short')
     end
   end
 

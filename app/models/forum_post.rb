@@ -14,5 +14,5 @@ class ForumPost < ApplicationRecord
   belongs_to :user
   belongs_to :forum_thread, optional: true
 
-  validates :body, presence: true
+  validates :body, presence: true, length: { minimum: 10 } 
 end

@@ -10,7 +10,7 @@ class ForumThreads::ForumPostsController < ApplicationController
       flash[:success] = "Post Saved"
       redirect_to forum_thread_path(@forum_thread)
     else
-      flash[:error] = "Post failed to save. Body can't be blank"
+      flash[:error] = @forum_post.errors.full_messages
       redirect_to @forum_thread
     end
   end
