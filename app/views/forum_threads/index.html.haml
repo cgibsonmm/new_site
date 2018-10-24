@@ -1,4 +1,4 @@
-%h1.page-header Forum Threads
-= link_to 'New Thread', new_forum_thread_path
+%h1.page-header Sprout Free Forum
+= render 'topbar', locals: @fourm_threads
 %ul.list-group
   = render @forum_threads, class: 'forum-group'

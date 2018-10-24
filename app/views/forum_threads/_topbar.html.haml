@@ -1,0 +1,16 @@
+%ul.nav.nav-pills
+  %li.nav-item
+  = link_to 'New Thread', new_forum_thread_path, class: 'nav-link'
+  -# %li.nav-item.dropdown
+  -#   %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Dropdown
+  -#   .dropdown-menu
+  -#     %a.dropdown-item{:href => "#"} Action
+  -#     %a.dropdown-item{:href => "#"} Another action
+  -#     %a.dropdown-item{:href => "#"} Something else here
+  -#     .dropdown-divider
+  -#     %a.dropdown-item{:href => "#"} Separated link
+  -# %li.nav-item
+  -#   %a.nav-link{:href => "#"} Link
+  -# %li.nav-item
+  -#   %a.nav-link.disabled{:href => "#"} Disabled
+  = link_to fa_icon("search", text: "Search"), "#", class: 'nav-item nav-link ml-auto mr-3'

@@ -12,7 +12,7 @@ RSpec.feature 'User creates new forum thread' do
     end
 
     scenario 'can create a new forum thread' do
-      expect(page).to have_content 'Forum Thread'
+      expect(page).to have_content 'Sprout Free Forum'
       click_link 'New Thread'
 
       fill_in("Title", with: 'This is a subject')

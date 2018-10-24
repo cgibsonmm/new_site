@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: 7145471d2083c0e258a981b682a64ad660a89fd3
+  specs:
+    ransack (2.0.1)
+      actionpack (>= 5.0)
+      activerecord (>= 5.0)
+      activesupport (>= 5.0)
+      i18n
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -103,6 +113,8 @@ GEM
       factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
     ffi (1.9.25)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     haml (5.0.4)
@@ -277,6 +289,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   factory_bot_rails
+  font-awesome-rails
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
@@ -284,6 +297,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.1)
+  ransack!
   rspec-rails (~> 3.8)
   sass-rails (~> 5.0)
   simple_form
