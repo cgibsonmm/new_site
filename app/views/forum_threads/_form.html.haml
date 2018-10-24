@@ -4,6 +4,6 @@
   .form-inputs
     = f.input :subject, label: false, placeholder: 'Title'
     = f.fields_for :forum_posts do |p|
-      = p.input :body, as: :text, placeholder: "Add a comment", label: false
+      = p.input :body, as: :text, placeholder: 'Post', label: false
   .form-actions
-    = f.button :submit, class: 'btn btn-success'
+    = f.submit "Post New Thread", class: 'btn btn-success'

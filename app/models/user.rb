@@ -41,6 +41,6 @@ class User < ApplicationRecord
   validates :username, presence: true, length: { in: (4..13) }
   validates :username, uniqueness: true
 
-  has_many :forum_threads
-  has_many :forum_posts
+  has_many :forum_threads, dependent: :destroy
+  has_many :forum_posts, dependent: :destroy
 end

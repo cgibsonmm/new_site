@@ -21,6 +21,7 @@ class ForumThreadsController < ApplicationController
 
     if @forum_thread.save
       redirect_to @forum_thread
+      flash[:success] = "Successfully created a new thread"
     else
       render 'new'
     end
