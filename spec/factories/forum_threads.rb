@@ -12,6 +12,6 @@
 FactoryBot.define do
   factory :forum_thread do
     user_id { 1 }
-    subject { "MyString" }
+    subject { "First Forum Thread" }
   end
 end
