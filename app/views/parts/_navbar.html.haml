@@ -1,0 +1,19 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  = link_to 'Sprout Free', root_path, class: 'navbar-brand'
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item
+        = link_to 'Forum', forum_threads_path, class: 'nav-link'
+    %ul.navbar-nav.my-2.my-lg-0
+      - if user_signed_in?
+        %li.nav-item
+          = link_to current_user.username, "#", class: 'user-name btn btn-alert nav-link mr-2'
+        %li.nav-item
+          = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-success nav-link mr-2'
+      - else
+        %li.nav-item
+          = link_to 'Sign in', new_user_session_path, class: 'btn btn-success nav-link mr-2'
+        %li.nav-item
+          = link_to 'Sign up', new_user_registration_path, class: 'btn btn-secondary nav-link mr-2'

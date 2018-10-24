@@ -1,0 +1,8 @@
+%h3 Sprout Free Forum
+%h5
+  = @forum_thread.subject
+  Body:
+  %br/
+  %br/
+  - @forum_thread.forum_posts.each do |post|
+    = post.body
