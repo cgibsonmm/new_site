@@ -1,8 +1,11 @@
-%h3 Sprout Free Forum
-%h5
+%h1
   = @forum_thread.subject
-  Body:
-  %br/
-  %br/
-  - @forum_thread.forum_posts.each do |post|
-    = post.body
+%p.text-muted
+  Started by:
+  = @forum_thread.user.username
+%hr
+= render @forum_thread.forum_posts
+
+
+.new-post-form
+  = render partial: "forum_posts/form"

@@ -1,0 +1,4 @@
+%h1.page-header Forum Threads
+= link_to 'New Thread', new_forum_thread_path
+%ul.list-group
+  = render @forum_threads, class: 'forum-group'
