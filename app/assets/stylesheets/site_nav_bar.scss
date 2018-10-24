@@ -1,0 +1,16 @@
+#site-navbar{
+  border: none;
+  padding: 10px 40px;
+  border-radius: 3px;
+  // box-shadow: 0 0 3px rgb(157, 157, 157);
+
+  .btn{
+    margin-right: 1px;
+    padding: 3px;
+  }
+}
+// @media (max-width: 800px){
+//   #site-navbar{
+//     display: none;
+//   }
+// }
