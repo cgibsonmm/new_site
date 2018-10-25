@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :users
+      resources :forum_posts
+      resources :forum_threads
+
+      root to: "users#index"
+    end
   devise_for :users
 
   resources :forum_threads do
