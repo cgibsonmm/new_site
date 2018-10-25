@@ -4,3 +4,7 @@
   %ul.list-group
     %li.list-group-item
       = link_to subject.subject_name, forum_subject_path(subject)
+
+%br
+- @forum_threads.each do |thread|
+  = thread.subject

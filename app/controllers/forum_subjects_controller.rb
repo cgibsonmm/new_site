@@ -1,9 +1,10 @@
 class ForumSubjectsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_forum_subject, only: [:show]
 
   def index
     @forum_subjects = ForumSubject.all
+    @forum_threads = ForumThread.all
   end
 
   def new

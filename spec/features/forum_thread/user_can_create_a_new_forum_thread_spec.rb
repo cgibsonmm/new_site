@@ -3,16 +3,18 @@ require 'rails_helper'
 RSpec.feature 'User creates new forum thread' do
   before do
     @user = create(:user)
+    @subject = create(:forum_subject)
   end
 
   context 'Signed in user' do
     before do
       sign_in_with(@user)
       click_link 'Forum'
+      expect(page).to have_content 'Current subjects'
+      click_link @subject.subject_name
     end
 
     scenario 'can create a new forum thread' do
-      expect(page).to have_content 'Sprout Free Forum'
       click_link 'New Thread'
 
       fill_in("Title", with: 'This is a subject')
@@ -71,14 +73,15 @@ RSpec.feature 'User creates new forum thread' do
     before do
       visit '/'
       expect(page).to have_content('Sign in')
+      click_link 'Forum'
+      click_link @subject.subject_name
     end
     scenario 'User must be signed in to create a forum thread' do
-      click_link 'Forum'
       click_link 'New Thread'
 
       expect(page).to have_content('You need to sign in or sign up before continuing')
 
-      visit '/forum_threads/new'
+      visit '/forum_subjects/1/forum_threads/new'
       expect(page).to have_content('You need to sign in or sign up before continuing')
     end
   end
