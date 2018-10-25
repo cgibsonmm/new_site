@@ -1,8 +1,12 @@
 %h1
   = @forum_thread.subject
 %p.text-muted
-  Started by:
+  Created
+  = local_time @forum_thread.created_at
+  by
   = @forum_thread.user.username
+
+
 %hr
 = render @forum_thread.forum_posts
 

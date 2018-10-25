@@ -45,6 +45,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1.3'
 gem 'font-awesome-rails'
 gem 'gravtastic'
+gem 'local_time'
 gem 'haml-rails'
 
 group :development, :test do
