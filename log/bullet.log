@@ -2713,3 +2713,36 @@ Call stack
   /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_posts/_forum_post.html.haml:4:in `_app_views_forum_posts__forum_post_html_haml___4596064549227855247_70348856987440'
   /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/show.html.haml:11:in `_app_views_forum_threads_show_html_haml__2495639461680649207_70348857134800'
 
+2018-10-25 18:40:57[WARN] user: coreygibson
+GET /forum_subjects/1
+USE eager loading detected
+  ForumThread => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/gravatar/_avatar.html.haml:1:in `_app_views_forum_threads_gravatar__avatar_html_haml__1901494432343722248_70216278015680'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/_forum_thread.html.haml:2:in `block in _app_views_forum_threads__forum_thread_html_haml___686143329603557485_70216278160120'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/_forum_thread.html.haml:1:in `_app_views_forum_threads__forum_thread_html_haml___686143329603557485_70216278160120'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_subjects/show.html.haml:5:in `_app_views_forum_subjects_show_html_haml__3051942197080917073_70216278522720'
+
+2018-10-25 18:41:09[WARN] user: coreygibson
+GET /forum_subjects/1
+USE eager loading detected
+  ForumThread => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/gravatar/_avatar.html.haml:1:in `_app_views_forum_threads_gravatar__avatar_html_haml__1901494432343722248_70216272873240'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/_forum_thread.html.haml:2:in `block in _app_views_forum_threads__forum_thread_html_haml___686143329603557485_70216273730260'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/_forum_thread.html.haml:1:in `_app_views_forum_threads__forum_thread_html_haml___686143329603557485_70216273730260'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_subjects/show.html.haml:5:in `_app_views_forum_subjects_show_html_haml__3051942197080917073_70216273972140'
+
+2018-10-25 18:41:16[WARN] user: coreygibson
+GET /forum_subjects/1
+USE eager loading detected
+  ForumThread => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/gravatar/_avatar.html.haml:1:in `_app_views_forum_threads_gravatar__avatar_html_haml__1901494432343722248_70216281295160'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/_forum_thread.html.haml:2:in `block in _app_views_forum_threads__forum_thread_html_haml___686143329603557485_70216274146040'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_threads/_forum_thread.html.haml:1:in `_app_views_forum_threads__forum_thread_html_haml___686143329603557485_70216274146040'
+  /Users/coreygibson/Documents/workspace/Sprout_free/Sprout_Free/app/views/forum_subjects/show.html.haml:5:in `_app_views_forum_subjects_show_html_haml__3051942197080917073_70216269312720'
+

@@ -1,12 +1,12 @@
 #site-navbar{
   border: none;
-  padding: 10px 40px;
+  padding: 10px 3px;
   border-radius: 3px;
   // box-shadow: 0 0 3px rgb(157, 157, 157);
-
-  .btn{
-    margin-right: 1px;
-    padding: 3px;
+  .navbar-brand{
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 }
 // @media (max-width: 800px){

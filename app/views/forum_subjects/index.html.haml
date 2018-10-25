@@ -1,10 +1,21 @@
-%h3 Current subjects
-= link_to "New subject", new_forum_subject_path
-- @forum_subjects.each do |subject|
-  %ul.list-group
-    %li.list-group-item
-      = link_to subject.subject_name, forum_subject_path(subject)
-
-%br
-- @forum_threads.each do |thread|
-  = thread.subject
+.card
+  .forum-content
+    .left-area.list-column
+      %ul.threads-top-bar
+        %li Current subjects
+        %li
+          = link_to "New subject", new_forum_subject_path
+      - @forum_subjects.each do |subject|
+        %ul.list-group
+          %li.list-group-item
+            = link_to subject.subject_name, forum_subject_path(subject)
+    .right-area.list-column
+      %ul.threads-top-bar
+        %li
+          = link_to 'Newest Thread', "#"
+        %li
+          = link_to "Top Threads", "#"
+      - @forum_threads.each do |thread|
+        %ul.list-group
+          %li.list-group-item
+            = link_to thread.subject, forum_thread_path(thread)
