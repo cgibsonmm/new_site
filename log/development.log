@@ -46852,3 +46852,77 @@ Processing by ForumThreadsController#show as HTML
 Completed 200 OK in 171ms (Views: 165.4ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/forum_subjects" for 127.0.0.1 at 2018-10-25 16:50:39 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/coreygibson/.rvm/rubies/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by ForumSubjectsController#index as HTML
+  Rendering forum_subjects/index.html.haml within layouts/application
+  [1m[36mForumSubject Load (0.3ms)[0m  [1m[34mSELECT "forum_subjects".* FROM "forum_subjects"[0m
+  ↳ app/views/forum_subjects/index.html.haml:3
+  [1m[36mForumThread Load (0.2ms)[0m  [1m[34mSELECT "forum_threads".* FROM "forum_threads"[0m
+  ↳ app/views/forum_subjects/index.html.haml:9
+  Rendered forum_subjects/index.html.haml within layouts/application (47.4ms)
+  Rendered parts/_header.html.haml (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/parts/_navbar.html.haml:10
+  Rendered parts/_navbar.html.haml (46.0ms)
+  Rendered parts/_flash.html.haml (8.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "forum_posts" WHERE "forum_posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/user/_info.html.haml:10
+  Rendered user/_info.html.haml (17.5ms)
+  Rendered parts/_footer.html.haml (5.8ms)
+Completed 200 OK in 4167ms (Views: 4128.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 16:50:44 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (4.9ms)
+  Rendered parts/_header.html.haml (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/parts/_navbar.html.haml:10
+  Rendered parts/_navbar.html.haml (6.9ms)
+  Rendered parts/_flash.html.haml (3.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "forum_posts" WHERE "forum_posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/user/_info.html.haml:10
+  Rendered user/_info.html.haml (6.0ms)
+  Rendered parts/_footer.html.haml (2.0ms)
+Completed 200 OK in 163ms (Views: 157.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/forum_subjects" for 127.0.0.1 at 2018-10-25 16:50:45 -0400
+Processing by ForumSubjectsController#index as HTML
+  Rendering forum_subjects/index.html.haml within layouts/application
+  [1m[36mForumSubject Load (0.3ms)[0m  [1m[34mSELECT "forum_subjects".* FROM "forum_subjects"[0m
+  ↳ app/views/forum_subjects/index.html.haml:3
+  [1m[36mForumThread Load (0.5ms)[0m  [1m[34mSELECT "forum_threads".* FROM "forum_threads"[0m
+  ↳ app/views/forum_subjects/index.html.haml:9
+  Rendered forum_subjects/index.html.haml within layouts/application (9.7ms)
+  Rendered parts/_header.html.haml (2.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/parts/_navbar.html.haml:10
+  Rendered parts/_navbar.html.haml (21.9ms)
+  Rendered parts/_flash.html.haml (6.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "forum_posts" WHERE "forum_posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/user/_info.html.haml:10
+  Rendered user/_info.html.haml (6.9ms)
+  Rendered parts/_footer.html.haml (3.2ms)
+Completed 200 OK in 204ms (Views: 196.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 16:50:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (4.0ms)
+  Rendered parts/_header.html.haml (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/parts/_navbar.html.haml:10
+  Rendered parts/_navbar.html.haml (8.9ms)
+  Rendered parts/_flash.html.haml (5.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "forum_posts" WHERE "forum_posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/user/_info.html.haml:10
+  Rendered user/_info.html.haml (8.6ms)
+  Rendered parts/_footer.html.haml (3.7ms)
+Completed 200 OK in 174ms (Views: 168.3ms | ActiveRecord: 0.5ms)
+
+
