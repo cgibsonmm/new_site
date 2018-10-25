@@ -1,0 +1,6 @@
+%h3 Current subjects
+= link_to "New subject", new_forum_subject_path
+- @forum_subjects.each do |subject|
+  %ul.list-group
+    %li.list-group-item
+      = link_to subject.subject_name, forum_subject_path(subject)

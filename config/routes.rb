@@ -6,10 +6,15 @@ Rails.application.routes.draw do
 
       root to: "users#index"
     end
+
+
   devise_for :users
 
-  resources :forum_threads do
-    resources :forum_posts, module: :forum_threads
+
+  resources :forum_subjects, shallow: true do
+    resources :forum_threads do
+      resources :forum_posts, module: :forum_threads
+    end
   end
 
   root "home#index"
