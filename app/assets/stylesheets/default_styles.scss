@@ -8,12 +8,14 @@ h5 {
 }
 
 body {
-  background-color: rgb(255,255,255);
+  background-color: rgb(243,243,243);
   font-family: 'Raleway', sans-serif;
   // font-family: 'Roboto Condensed', sans-serif;
   //font-family: 'Roboto Mono', monospace;
 
   .dynamic-content{
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(252, 80, 71);
     height: 90vh;
     display: flex;
     justify-content: space-between;
@@ -22,7 +24,7 @@ body {
       padding-right: 15px;
     }
     .side-bar{
-      background-color: rgb(243,243,243);
+      background-color: rgb(255, 255, 255);
       padding-right: 40px;
       flex-basis: 300px;
     }
