@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_25_040008) do
+ActiveRecord::Schema.define(version: 2018_10_26_164854) do
+
+  create_table "forum_post_photos", force: :cascade do |t|
+    t.text "image_data"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_forum_post_photos_on_user_id"
+  end
 
   create_table "forum_posts", force: :cascade do |t|
     t.integer "forum_thread_id"

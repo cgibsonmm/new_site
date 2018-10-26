@@ -19,4 +19,5 @@
 //= require activestorage
 //= require turbolinks
 //= require local-time
+//= require trix
 //= require_tree .

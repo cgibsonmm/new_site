@@ -45,4 +45,5 @@ class User < ApplicationRecord
 
   has_many :forum_threads, dependent: :destroy
   has_many :forum_posts, dependent: :destroy
+  has_many :forum_post_photos, dependent: :destroy
 end

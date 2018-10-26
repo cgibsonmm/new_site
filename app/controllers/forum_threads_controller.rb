@@ -30,7 +30,7 @@ class ForumThreadsController < ApplicationController
       redirect_to @forum_thread
       flash[:success] = "Successfully created a new thread"
     else
-      flash[:error] = @forum_thread.errors.full_messages
+      flash.now[:error] = @forum_thread.errors.full_messages
       render 'new'
     end
   end

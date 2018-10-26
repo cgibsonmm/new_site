@@ -1,9 +1,9 @@
-= simple_form_for [@forum_subject, @forum_thread] do |f|
-  = f.error_notification
-  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
-  .form-inputs
-    = f.input :subject, label: false, placeholder: 'Title'
+= form_with(model: [@forum_subject, @forum_thread]) do |f|
+  .form-group
+    = f.text_field :subject, label: false, placeholder: 'Title', class: 'form-control string required'
     = f.fields_for :forum_posts do |p|
-      = p.input :body, as: :text, placeholder: 'Post', label: false
-  .form-actions
-    = f.submit "Post New Thread", class: 'btn btn-success'
+      .field.mt-3
+        = p.hidden_field :body, id: :forum_post_body
+        %trix-editor{input: "forum_post_body", id:"trix"}
+        .form-actions.mt-2
+          = f.submit "Post New Thread", class: 'btn btn-success ml-auto'
