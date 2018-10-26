@@ -6,7 +6,7 @@ ruby '2.4.1'
 gem 'jquery-rails'
 gem  'devise'
 gem 'the_big_username_blacklist'
-# gem "administrate"
+gem "administrate"
 
 gem 'simple_form'
 gem 'ransack', github: 'activerecord-hackery/ransack'
