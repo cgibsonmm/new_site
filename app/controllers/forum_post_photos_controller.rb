@@ -1,7 +1,7 @@
 class ForumPostPhotosController < ApplicationController
   before_action :set_forum_post_photo, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show]
-  before_action :post_owner?, except: [:index, :show]
+  before_action :authenticate_user!
+  # before_action :post_owner?, except: [:index, :show]
 
   # GET /forum_post_photos
   # GET /forum_post_photos.json

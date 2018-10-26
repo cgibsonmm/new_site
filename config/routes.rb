@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # may remove this
+  mount ImageUploader::UploadEndpoint => "/images"
+  
   resources :forum_post_photos
   namespace :admin do
       resources :users

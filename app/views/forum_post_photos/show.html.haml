@@ -3,7 +3,7 @@
 
   = image_tag @forum_post_photo.image_url
   %b Image data:
-  = @forum_post_photo.image
+  = @forum_post_photo.image(public: true)
 %p
   -# %b User:
   -# = @forum_post_photo.user
