@@ -4,7 +4,7 @@ class ForumSubjectsController < ApplicationController
 
   def index
     @forum_subjects = ForumSubject.all
-    @forum_threads = ForumThread.all
+    @forum_threads = ForumThread.all.includes(:user)
   end
 
   def new

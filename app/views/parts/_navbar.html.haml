@@ -3,9 +3,15 @@
   %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
-    %ul.navbar-nav.mr-auto
-      %li.nav-item
+    %ul.navbar-nav.mr-auto.ml-auto
+      %li.nav-item.mr-2
         = link_to 'Forum', forum_subjects_path, class: 'nav-link'
+      %li.nav-item.mr-3.disabled
+        = link_to 'Placeholder', "#", class: 'nav-link'
+      %li.nav-item.mr-3.disabled
+        = link_to 'Placeholder', "#", class: 'nav-link'
+      %li.nav-item.mr-3.disabled
+        = link_to 'Placeholder', "#", class: 'nav-link'
     %ul.navbar-nav.my-2.my-lg-0
       - if user_signed_in?
         %li.nav-item
