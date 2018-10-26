@@ -10,7 +10,7 @@ RSpec.feature 'User creates new forum thread' do
     before do
       sign_in_with(@user)
       click_link 'Forum'
-      expect(page).to have_content 'Current subjects'
+      expect(page).to have_content 'Top Subjects'
       click_link @subject.subject_name
     end
 
@@ -18,7 +18,7 @@ RSpec.feature 'User creates new forum thread' do
       click_link 'New Thread'
 
       fill_in("Title", with: 'This is a subject')
-      fill_in("Post", with: 'This is a test body')
+      fill_in_trix_editor('forum_post_body', 'This is a test body')
       click_button 'Post New Thread'
 
       expect(page).to have_content('Successfully created a new thread')
@@ -30,7 +30,7 @@ RSpec.feature 'User creates new forum thread' do
       click_link 'New Thread'
 
       fill_in("Title", with: '')
-      fill_in("Post", with: 'This is a test body')
+      fill_in_trix_editor('forum_post_body', 'This is a test body')
       click_button 'Post New Thread'
 
       expect(page).to have_content("Subject can't be blank")
@@ -40,7 +40,7 @@ RSpec.feature 'User creates new forum thread' do
       click_link 'New Thread'
 
       fill_in("Title", with: '!')
-      fill_in("Post", with: 'This is a test body')
+      fill_in_trix_editor('forum_post_body', 'This is a test body')
       click_button 'Post New Thread'
 
       expect(page).to have_content("Subject is too short")
@@ -50,7 +50,7 @@ RSpec.feature 'User creates new forum thread' do
       click_link 'New Thread'
 
       fill_in("Title", with: '!' * 51)
-      fill_in("Post", with: 'This is a test body')
+      fill_in_trix_editor('forum_post_body', 'This is a test body')
       click_button 'Post New Thread'
 
       expect(page).to have_content("Subject is too long")
@@ -60,10 +60,10 @@ RSpec.feature 'User creates new forum thread' do
       click_link 'New Thread'
 
       fill_in("Title", with: 'This is a test title')
-      fill_in("Post", with: '')
+      fill_in_trix_editor('forum_post_body', '')
       click_button 'Post New Thread'
 
-      expect(page).to have_content("Body can't be blank")
+      expect(page).to have_content("body can't be blank")
     end
 
     # Rest of validation housed in Creating ForumPost Spec
