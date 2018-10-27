@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  # may remove this
-  mount ImageUploader.upload_endpoint(:cache) => "/images/upload"
+  mount Shrine.presign_endpoint(:cache) => "/presign"
 
+  resources :test_photos
   resources :forum_post_photos
   namespace :admin do
       resources :users
