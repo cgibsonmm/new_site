@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Image data:
+  = @test_photo.image_data
+
+= link_to 'Edit', edit_test_photo_path(@test_photo)
+\|
+= link_to 'Back', test_photos_path

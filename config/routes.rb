@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :test_photos
   resources :forum_post_photos
   namespace :admin do
       resources :users
