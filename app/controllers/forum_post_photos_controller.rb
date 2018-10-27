@@ -1,7 +1,7 @@
 class ForumPostPhotosController < ApplicationController
   before_action :set_forum_post_photo, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
-  before_action :post_owner?, except: [:index, :show]
+  # before_action :post_owner?, except: [:index, :show]
 
   # GET /forum_post_photos
   # GET /forum_post_photos.json
@@ -65,9 +65,9 @@ class ForumPostPhotosController < ApplicationController
 
   private
 
-  def post_owner?
-    redirect_to root_path if @forum_post_photo.user_id != current_user.id
-  end
+  # def post_owner?
+  #   redirect_to root_path if @forum_post_photo.user_id != current_user.id
+  # end
     # Use callbacks to share common setup or constraints between actions.
     def set_forum_post_photo
       @forum_post_photo = ForumPostPhoto.find(params[:id])

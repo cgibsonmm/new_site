@@ -14,6 +14,6 @@
 #
 
 class ForumPostPhoto < ApplicationRecord
-  # include ImageUploader[:image]
+  include ImageUploader[:image]
   belongs_to :user
 end

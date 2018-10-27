@@ -30,6 +30,7 @@ document.addEventListener("trix-attachment-add", function(event){
   var attachment = event.attachment;
 
   if (attachment.file){
+    console.log('new',attachment);
     return uploadAttachment(attachment);
   }
 });
