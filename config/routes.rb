@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Shrine.presign_endpoint(:cache) => "/presign"
+
   resources :test_photos
   resources :forum_post_photos
   namespace :admin do

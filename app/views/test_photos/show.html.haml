@@ -2,7 +2,7 @@
 
 %p
   %b Image data:
-  = @test_photo.image_data
+  = image_tag @test_photo.image_url
 
 = link_to 'Edit', edit_test_photo_path(@test_photo)
 \|

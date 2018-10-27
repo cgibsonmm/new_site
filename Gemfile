@@ -46,8 +46,8 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'font-awesome-rails'
 gem 'gravtastic'
 gem 'trix'
-gem 'shrine'
-gem 'aws-sdk-s3'
+gem "shrine"
+gem "aws-sdk-s3"
 gem 'roda'
 gem 'jquery-fileupload-rails'
 gem 'local_time'
