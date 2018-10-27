@@ -12,5 +12,5 @@ Shrine.storages = {
 }
 
 Shrine.plugin :activerecord
-Shrine.plugin :direct_upload
+Shrine.plugin :upload_endpoint, allowed_storages: [:cache, :store]
 Shrine.plugin :restore_cached_data

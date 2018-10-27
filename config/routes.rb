@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # may remove this
-  mount ImageUploader::UploadEndpoint => "/images"
-  
+  mount ImageUploader.upload_endpoint(:cache) => "/images/upload"
+
   resources :forum_post_photos
   namespace :admin do
       resources :users
